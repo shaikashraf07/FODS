@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv("sales_sample.csv")
+avg_sales=df['Total_Sales'].mean()
+print("Average Sales:", avg_sales)
+
+##according to month
+sales_by_month=df.groupby('Month_Year')['Total_Sales'].mean()
+print(sales_by_month)
